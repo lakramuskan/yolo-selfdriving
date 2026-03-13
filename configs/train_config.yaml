@@ -1,0 +1,49 @@
+# ============================================================
+# Training Configuration — YOLOv8 Self-Driving
+# Project Code: SIC/AI/003
+# ============================================================
+
+# Model
+model: yolov8m.pt          # Options: yolov8n/s/m/l/x.pt
+                           # n=nano(fastest), m=medium(balanced), x=extra-large(best accuracy)
+
+# Training hyperparameters
+epochs: 100               # Total training epochs (use 50 for quick test)
+patience: 20              # Early stopping patience (epochs without improvement)
+batch: 16                 # Batch size (-1 for auto)
+imgsz: 640                # Input image size (pixels)
+workers: 4                # Dataloader workers
+
+# Optimizer
+optimizer: AdamW          # Options: SGD, Adam, AdamW, RMSProp
+lr0: 0.01                 # Initial learning rate
+lrf: 0.001                # Final learning rate (lr0 * lrf)
+momentum: 0.937           # SGD momentum / Adam beta1
+weight_decay: 0.0005      # Optimizer weight decay
+warmup_epochs: 3          # Warmup epochs
+
+# Augmentation (built-in)
+hsv_h: 0.015              # Hue augmentation (fraction)
+hsv_s: 0.7                # Saturation augmentation
+hsv_v: 0.4                # Value augmentation
+degrees: 0.0              # Rotation (degrees)
+translate: 0.1            # Translation (fraction)
+scale: 0.5                # Scale (gain)
+flipud: 0.0               # Flip up-down (probability)
+fliplr: 0.5               # Flip left-right (probability)
+mosaic: 1.0               # Mosaic augmentation (probability)
+mixup: 0.1                # MixUp augmentation (probability)
+copy_paste: 0.0           # Copy-paste augmentation
+
+# Output
+project: ./runs/train     # Save directory
+name: yolo_selfdriving    # Experiment name
+save: true                # Save checkpoints
+save_period: 10           # Save checkpoint every N epochs
+plots: true               # Generate training plots
+
+# Device
+device: 0                 # CUDA device (0 for GPU, 'cpu' for CPU)
+
+# Logging
+verbose: true

@@ -1,0 +1,48 @@
+# ============================================================
+# Dataset Configuration for YOLO Self-Driving Detection
+# Project Code: SIC/AI/003
+# ============================================================
+
+# Dataset paths (update these to your actual paths)
+path: ./data              # Root dataset directory
+train: images/train       # Training images (relative to path)
+val:   images/val         # Validation images
+test:  images/test        # Test images (optional)
+
+# Number of classes
+nc: 13
+
+# Class names — Self-Driving Object Categories
+names:
+  0:  person          # Pedestrians, cyclists
+  1:  bicycle         # Bicycles
+  2:  car             # Cars, sedans, hatchbacks
+  3:  motorcycle      # Motorcycles, scooters
+  4:  autorickshaw    # Auto-rickshaws (Indian roads)
+  5:  bus             # Buses, minibuses
+  6:  truck           # Trucks, lorries
+  7:  traffic_light   # Traffic lights (red/yellow/green)
+  8:  stop_sign       # Stop signs
+  9:  speed_breaker   # Speed bumps/breakers
+  10: pothole         # Road potholes
+  11: animal          # Animals on road (dogs, cows)
+  12: construction    # Construction zones / barriers
+
+# Class colors for visualization (BGR format)
+colors:
+  person:        [0, 255, 0]       # Green
+  bicycle:       [255, 128, 0]     # Orange
+  car:           [0, 128, 255]     # Blue
+  motorcycle:    [255, 0, 128]     # Pink
+  autorickshaw:  [128, 0, 255]     # Purple
+  bus:           [0, 255, 255]     # Cyan
+  truck:         [255, 255, 0]     # Yellow
+  traffic_light: [255, 0, 0]       # Red
+  stop_sign:     [0, 0, 255]       # Dark Blue
+  speed_breaker: [128, 128, 0]     # Olive
+  pothole:       [0, 128, 128]     # Teal
+  animal:        [128, 0, 0]       # Maroon
+  construction:  [200, 200, 200]   # Gray
+
+# Download: Uncomment to use COCO (base pretraining)
+# download: https://ultralytics.com/assets/coco8.zip
