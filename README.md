@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚗 Object Detection for Self-Driving using YOLO
 ### Project Code: SIC/AI/003 | SIC Student Innovation Challenge 2025–26
 
@@ -212,3 +213,7 @@ model.export(format='onnx', imgsz=640, optimize=True)
 ---
 
 *SIC Student Innovation Challenge 2025–26 | Project SIC/AI/003*
+=======
+# yolo-selfdriving
+Object Detection for Self-Driving using YOLOv8 
+>>>>>>> a4620682664f6a05c799cacd2635ce5287828e1a
